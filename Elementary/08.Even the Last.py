@@ -3,7 +3,7 @@ def checkio(a):
     if len(a) == 0:
         return 0
         
-    for i in range(0,len(a),2) :
+    for i in range(0,len(a),2):
         sum+=a[i]        
     return sum * a[-1]
 
