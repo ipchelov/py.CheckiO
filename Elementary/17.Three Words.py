@@ -7,7 +7,6 @@ def checkio(words: str) -> bool:
                 return True
         else:
             count=0
-
     return False
 
 # These "asserts" using only for self-checking and not necessary for auto-testing
