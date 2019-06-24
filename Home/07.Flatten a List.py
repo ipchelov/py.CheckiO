@@ -1,15 +1,11 @@
 def flat_list(array):
-    k = 0
-    while(k<10):
-        new = []
-        for i in array:
-            try:
-                new.extend(i)
-            except:
-                new.append(i)
-        k+=1
-        array = new
-    return new
+    result = []
+    for i in array:
+        if type(i) == list:
+            result = result+flat_list(i)
+        else:
+            result.append(i)
+    return result
 
 if __name__ == '__main__':
     assert flat_list([1, 2, 3]) == [1, 2, 3], "First"
